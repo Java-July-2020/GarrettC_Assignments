@@ -2,10 +2,11 @@ package ObjectMasterPT2;
 
 public class Samurai extends Human{
 
-    static int samuraiCount = 1;
+    public static int samuraiCount = 0;
 
     public Samurai(){
         super(3,3,3,200);
+        samuraiCount++;
     }
 
     public int deathBlow(Human player){
@@ -20,7 +21,7 @@ public class Samurai extends Human{
         System.out.println("Samurai Cast Meditate");
     }
 
-    public int howMany(){
+    public static int howMany(){
         return samuraiCount;
     }
 }
