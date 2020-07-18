@@ -33,7 +33,8 @@ public class HumanTest {
 
         wolf.meditate();
         System.out.println("Wolf Current HP: " + wolf.health);
-
+        
+        Samurai.howMany();
         System.out.println("Current Number of Samurai: " + Samurai.howMany());
 
 
