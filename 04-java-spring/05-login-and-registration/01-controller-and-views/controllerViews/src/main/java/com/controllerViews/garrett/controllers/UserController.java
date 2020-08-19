@@ -23,6 +23,10 @@ public class UserController {
      this.userService = userService;
      this.validator = validator;
  }
+ @RequestMapping("/")
+ public String home() {
+	 return "redirect:/login";
+ }
  
  @RequestMapping("/registration")
  public String registerForm(@ModelAttribute("user") User user) {
@@ -43,7 +47,7 @@ public class UserController {
 	}
 	User u = this.userService.registerUser(user);
 	session.setAttribute("user_id", u.getId());
-	return"redirect:/home";
+	return"redirect:/login";
  }
  
  @RequestMapping(value="/login", method=RequestMethod.POST)
@@ -64,7 +68,7 @@ public class UserController {
      Long userId = (Long) session.getAttribute("user_id");
      User user = userService.findUserById(userId);
      model.addAttribute("user", user);
-     return "homepage.jsp";
+     return "homePage.jsp";
  }
  
  @RequestMapping("/logout")

@@ -7,9 +7,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Login Page</title>
+ 
 </head>
 <body>
     <h1>Login</h1>
+    <a href="/registration">Register</a>
     <p><c:out value="${error}" /></p>
     <form method="post" action="/login">
         <p>

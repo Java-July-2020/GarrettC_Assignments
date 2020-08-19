@@ -26,7 +26,7 @@ public class User {
 	private String password;
 	
 	@Transient
-	private String passwordConfrimation;
+	private String passwordConfirmation;
 	
 	@Column
 	@DateTimeFormat(pattern = "MM/dd/yyyy HH:mm:ss")
@@ -63,12 +63,12 @@ public class User {
 		this.password = password;
 	}
 
-	public String getPasswordConfrimation() {
-		return passwordConfrimation;
+	public String getPasswordConfirmation() {
+		return passwordConfirmation;
 	}
 
-	public void setPasswordConfrimation(String passwordConfrimation) {
-		this.passwordConfrimation = passwordConfrimation;
+	public void setPasswordConfirmation(String passwordConfirmation) {
+		this.passwordConfirmation = passwordConfirmation;
 	}
 
 	public Date getCreatedAt() {
